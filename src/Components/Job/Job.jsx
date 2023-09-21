@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { AiOutlineDollar } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
-  const {
+  const {id,
     logo,
     job_title,
     company_name,
@@ -39,7 +40,9 @@ const Job = ({ job }) => {
             </div>
           </div>
           <div className="card-actions">
+            <Link to={`/job/${id}`}>
             <button className="btn btn-primary">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

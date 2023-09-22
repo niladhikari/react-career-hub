@@ -12,7 +12,7 @@ const Banner = () => {
           <button className="p-5 rounded-md bg-blue-600 text-white font-bold">Get Started</button>
         </div>
         <div>
-          <img src="/public/user.png" alt="" />
+          <img src="/user.png" alt="" />
         </div>
       </div>
     </div>

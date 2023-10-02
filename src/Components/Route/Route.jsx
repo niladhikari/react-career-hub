@@ -4,6 +4,8 @@ import Home from "../Home/Home";
 import AppliedJobs from "../AppliedJobs/AppliedJobs";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import JobDetails from "../JobDetails/JobDetails";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
 
 
 const router = createBrowserRouter([
@@ -26,7 +28,16 @@ const router = createBrowserRouter([
                 loader:()=>fetch('/jobs.json'),
                 element:<JobDetails></JobDetails>
 
-            }
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
+
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
+            },
         ]
     }
 ])

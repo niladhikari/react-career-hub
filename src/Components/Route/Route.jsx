@@ -6,6 +6,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import JobDetails from "../JobDetails/JobDetails";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -20,13 +21,13 @@ const router = createBrowserRouter([
             },
             {
                 path:'/applied',
-                element: <AppliedJobs></AppliedJobs>,
+                element: <PrivateRoute><AppliedJobs></AppliedJobs></PrivateRoute>,
                 loader: () => fetch('/jobs.json') // warning: only load the data you need. do not load all the data
             },
             {
                 path:'/job/:id',
                 loader:()=>fetch('/jobs.json'),
-                element:<JobDetails></JobDetails>
+                element:<PrivateRoute><JobDetails></JobDetails></PrivateRoute>
 
             },
             {
